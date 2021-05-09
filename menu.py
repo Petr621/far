@@ -171,20 +171,22 @@ def menu():
                 print("Проверка обновлений")
                 
                 upd = requests.get('https://raw.githubusercontent.com/Petr621/far/main/version.txt')
-                upd_ver = int(upd.text[0:3])
+                upd_ver = str(upd.text[0:3])
                 print('Последняя версия - ' + upd_ver)
                 print('Ваша текущая версия - ' + version)
-                if upd_ver > version:
+                if upd_ver = version:
+                    print("не найдено обновление ")
+                    
+                 
+                else:
+                    
                     print("Найдено обновление " + upd.text[0:3] + "\nИзменения:\n" + upd.text[4:])
                     print("\nНачато обновление")
                     os.system("cd $HOME && rm -rf far && git clone https://github.com/Petr621/far && cd far")
                     os.system("chmod +x menu.py")
                     print("\nОбновление завершено, Открываю...")
                     time.sleep(5)
-                    os.system("./menu.py")
-                 
-                else:
-                    print("Ошибка, файл обновлений не найден")
+                    os.system("python3 menu.py")
 
             checkver()
         proga()
