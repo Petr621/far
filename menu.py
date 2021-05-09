@@ -185,8 +185,6 @@ def menu():
 
                     else:
                         print("Ошибка, файл обновлений не найден")
-                except BaseException:
-                    print("Нет интернета, попробуйте позже")
 
             checkver()
         proga()
