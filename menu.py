@@ -177,7 +177,7 @@ def menu():
                     if upd_ver > version:
                         print("Найдено обновление " + upd.text[0:3] + "\nИзменения:\n" + upd.text[4:])
                         print("\nНачато обновление")
-                        os.system("cd $HOME && rm -rf spammer && git clone https://github.com/cludeex/spammer && cd spammer && sh install.sh")
+                        os.system("cd $HOME && rm -rf far && git clone https://github.com/Petr621/far/blob/main/menu.py && cd far && sh install.sh")
                         print("\nОбновление завершено, откройте программу\npython far/menu.py")
 
                     else:
