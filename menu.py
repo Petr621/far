@@ -177,8 +177,11 @@ def menu():
                     if upd_ver > version:
                         print("Найдено обновление " + upd.text[0:3] + "\nИзменения:\n" + upd.text[4:])
                         print("\nНачато обновление")
-                        os.system("cd $HOME && rm -rf far && git clone https://github.com/Petr621/far/blob/main/menu.py && cd far && sh install.sh")
-                        print("\nОбновление завершено, откройте программу\npython far/menu.py")
+                        os.system("cd $HOME && rm -rf far && git clone https://github.com/Petr621/far && cd far")
+                        os.system("chmod +x menu.py")
+                        print("\nОбновление завершено, Открываю...")
+                        time.sleep(5)
+                        os.system("./menu.py")
 
                     else:
                         print("Ошибка, файл обновлений не найден")
