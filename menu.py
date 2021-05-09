@@ -7,7 +7,7 @@ bold      = '\033[1m'
 underline = '\033[4m'
 end       = '\033[0m'
 red       = '\033[91m'
-version = 1
+version = "1"
 print('Запуск...')
 time.sleep(0.5)
 os.system('cls')
@@ -174,7 +174,7 @@ def menu():
                 upd_ver = str(upd.text[0:3])
                 print('Последняя версия - ' + upd_ver)
                 print('Ваша текущая версия - ' + version)
-                if upd_ver = version:
+                if upd_ver == version:
                     print("не найдено обновление ")
                     
                  
