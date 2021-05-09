@@ -171,7 +171,7 @@ def menu():
                 print("Проверка обновлений")
                 
                 upd = requests.get('https://raw.githubusercontent.com/Petr621/far/main/version.txt')
-                upd_ver = float(upd.text[0:3])
+                upd_ver = int(upd.text[0:3])
                 print('Последняя версия - ' + upd_ver)
                 print('Ваша текущая версия - ' + version)
                 if upd_ver > version:
