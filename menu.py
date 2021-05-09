@@ -1,12 +1,3 @@
-import requests
-import os
-import time
-green     = '\033[92m'
-cyan      = '\033[95m'
-bold      = '\033[1m'
-underline = '\033[4m'
-end       = '\033[0m'
-red       = '\033[91m'
 version = 1
 print('Запуск...')
 time.sleep(0.5)
